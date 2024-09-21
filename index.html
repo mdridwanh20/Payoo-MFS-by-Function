@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- tailwind CDN link here -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- daisy UI CDN link here -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-1">
+
+<!--  available balance ---------------------- -->
+            <div class="stats shadow">
+                <div class="stat">
+                  <div id="account-balance" class="stat-value">900</div>
+                  <div class="stat-desc">Available Balance</div>
+                </div>
+            </div>
+
+        <!--  DIVIDER HERE -->
+            <div class="m-2 divider"></div>
+
+<!-- add money and cash out Btn -->
+            <div>
+                <button id="add-money-show-btn" class="btn">Add Money</button>
+                <button id="cash-out-show-btn" class="btn">Cash Out</button>
+                <button id="transaction-show-btn" class="btn">Transaction</button>
+            </div>
+        <!--  DIVIDER HERE -->
+            <div class="m-2 divider"></div>
+
+
+<!-- * add money form here -->
+            <div id="add-money-form" class="">
+                <form class="bg-white p-5 rounded-md shadow-lg">
+
+                <!-- input text account  -->
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Account Number</span>
+                      </label>
+                      <input id="add-money-account" type="text" placeholder="Money" class="focus:outline-none input input-bordered" required />
+                    </div>
+                <!-- input pin or password  -->
+
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Pin Number</span>
+                      </label>
+                      <input id="add-money-pin-number" type="password" placeholder="Pin Number: 123" class="focus:outline-none input input-bordered" required />
+                    </div>
+                <!--  -->
+                    <div  class="form-control mt-4">
+                      <button id="btn-add-money" class="btn btn-primary">Add Money</button>
+                    </div>
+
+                </form>
+            </div>
+
+<!-- * cash out form here -->
+            <div id="cash-out-form" class="hidden">
+                <form class="bg-white p-5 rounded-md shadow-lg">
+
+                <!-- input text account  -->
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Cash Out </span>
+                      </label>
+                      <input id="input-cash-out-account" type="text" placeholder="Cash Out Amount" class="focus:outline-none input input-bordered" required />
+                    </div>
+                <!-- input pin or password  -->
+
+                    <div class="form-control">
+                      <label class="label">
+                        <span class="label-text">Pin Number</span>
+                      </label>
+                      <input id="cash-out-pin-number" type="password" placeholder="Pin Number: 123" class="focus:outline-none input input-bordered" required />
+                    </div>
+                <!--  -->
+                    <div  class="form-control mt-4">
+                      <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
+                    </div>
+
+                </form>
+            </div>
+
+<!-- Transaction form here -->
+            <div id="transaction-section-form" class="hidden">
+                <h2 class="text-center">Transaction History</h2>
+                <div id="Transaction-container"></div>
+            </div>
+
+
+          </div>
+        </div>
+    </div>
+
+    </main>
+
+    <script src="./add_money.js"></script>
+    <script src="./cashOut.js"></script>
+    <script src="./utilizing.js"></script>
+    <script src="./features.js"></script>
+
+</body>
+</html>
