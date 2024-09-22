@@ -5,6 +5,13 @@ document.getElementById('btn-add-money')
         const addedMoney = getInputFieldById('add-money-account');
         const pinNumber = getInputFieldById('add-money-pin-number');
 
+        // number check there.
+        if (isNaN(addedMoney)){
+            alert('Failed to add money')
+            return;
+        }
+
+
         if (pinNumber === 123){
             const accountBalance = getInputNewAddBalance('account-balance')
             const newBalance = addedMoney + accountBalance;

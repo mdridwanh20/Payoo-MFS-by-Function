@@ -4,6 +4,7 @@ document.getElementById('add-money-show-btn')
         showSectionById('add-money-form')
     })
 
+    
 
 document.getElementById('cash-out-show-btn')
     .addEventListener('click', function(){
